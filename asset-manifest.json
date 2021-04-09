@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-flags-quiz/static/css/main.f02cf34e.chunk.css",
+    "main.js": "/react-flags-quiz/static/js/main.a2d00092.chunk.js",
+    "main.js.map": "/react-flags-quiz/static/js/main.a2d00092.chunk.js.map",
+    "runtime-main.js": "/react-flags-quiz/static/js/runtime-main.70f10453.js",
+    "runtime-main.js.map": "/react-flags-quiz/static/js/runtime-main.70f10453.js.map",
+    "static/js/2.931fc660.chunk.js": "/react-flags-quiz/static/js/2.931fc660.chunk.js",
+    "static/js/2.931fc660.chunk.js.map": "/react-flags-quiz/static/js/2.931fc660.chunk.js.map",
+    "index.html": "/react-flags-quiz/index.html",
+    "static/css/main.f02cf34e.chunk.css.map": "/react-flags-quiz/static/css/main.f02cf34e.chunk.css.map",
+    "static/js/2.931fc660.chunk.js.LICENSE.txt": "/react-flags-quiz/static/js/2.931fc660.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70f10453.js",
+    "static/js/2.931fc660.chunk.js",
+    "static/css/main.f02cf34e.chunk.css",
+    "static/js/main.a2d00092.chunk.js"
+  ]
+}
