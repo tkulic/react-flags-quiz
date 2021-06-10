@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react"
-import countries from "../countries"
+import countries from "../data/countries"
 import confetti from "canvas-confetti"
 import { generateRandomIndex, shuffle, confettiEnd } from "../utils/utils"
 
@@ -10,8 +9,7 @@ export default function useQuizEngine() {
     const [isGameRunning, setIsGameRunning] = useState(false)
     const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false)
     const [round, setRound] = useState(0)
-    // eslint-disable-next-line no-unused-vars
-    const [roundsTotal, setRoundsTotal] = useState(10)
+    const [roundsTotal] = useState(10)
     const [score, setScore] = useState(0)
     const [isGameOver, setIsGameOver] = useState(false)
     const [message, setMessage] = useState("Test your knowledge of country flags!")
@@ -40,9 +38,11 @@ export default function useQuizEngine() {
         setMessage("Which country is represented by this flag?")
 
         let generatedAnswers = []
+        // first, generate the correct answer
         let generatedCountry = { ...countries[generateRandomIndex(countries)], isCorrectAnswer: true }
         generatedAnswers.push(generatedCountry)
 
+        // then generate 3 wrong answers
         for (let i = 0; i < 3; i++) {
             let randomCountry = countries[generateRandomIndex(countries)]
             if (generatedAnswers.some(el => el.ISOCode === randomCountry.ISOCode)) {
@@ -53,7 +53,6 @@ export default function useQuizEngine() {
             }
         }
         shuffle(generatedAnswers)
-
         setCurrentCountry(generatedCountry)
         setAllAnswers(generatedAnswers)
         setRound(round + 1)

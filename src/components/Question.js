@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Question(props) {
-
     return (
         <div className="question-container">
             <img className="flag" src={`https://flagcdn.com/80x60/${props.currentCountry.ISOCode}.png`} alt="You won't find the answer here! 😉" />
